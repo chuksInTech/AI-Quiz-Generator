@@ -42,7 +42,7 @@ Got any question? Please don't hesitate to reach out to me:
 
 chyootch@gmail.com
 
-X [@chuksintech] (https://x.com/chuksintech)
+X [@chuksintech](https://x.com/chuksintech)
 
 Linkedin [@chuksintech](https://linkedin.com/in/chuksintech) — say hi!
     
