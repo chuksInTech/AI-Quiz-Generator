@@ -41,7 +41,8 @@ Technologies Used
 Got any question? Please don't hesitate to reach out to me:
 
 chyootch@gmail.com
-x.com/chuksintech
 
-Built by [Chukwuma Duru @chuksintech](https://linkedin.com/in/chuksintech) — say hi!
+X @chuksintech https://x.com/chuksintech
+
+Linkedin [Chukwuma Duru @chuksintech](https://linkedin.com/in/chuksintech) — say hi!
     
