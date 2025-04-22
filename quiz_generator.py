@@ -33,6 +33,8 @@ else:
 
 # In[ ]:
 
+client = OpenAI(api_key=api_key)
+
 
 def generate_quiz(topic, num_questions=5):
     """Generate a quiz with the specified topic and number of questions"""
@@ -88,7 +90,8 @@ def generate_quiz(topic, num_questions=5):
                     try:
                         return json.loads(match.group(1))
                     except:
-                        raise ValueError("Failed to parse quiz content as JSON")
+                        raise ValueError(
+                            "Failed to parse quiz content as JSON")
                 else:
                     raise ValueError("Could not extract JSON from response")
         else:
@@ -173,7 +176,8 @@ def calculate_results(quiz_data, user_answers):
 def display_results(results):
     """Display quiz results in a readable format"""
     print("\n--- Quiz Results ---")
-    print(f"Score: {results['score']}/{results['total']} ({results['percentage']:.1f}%)")
+    print(
+        f"Score: {results['score']}/{results['total']} ({results['percentage']:.1f}%)")
 
     if results['percentage'] >= 90:
         print("Excellent job! 🌟")
@@ -210,7 +214,8 @@ def run_quiz_session():
 
         while True:
             try:
-                num_questions = int(input("How many questions would you like (1-10)? "))
+                num_questions = int(
+                    input("How many questions would you like (1-10)? "))
                 if 1 <= num_questions <= 10:
                     break
                 else:
@@ -230,14 +235,16 @@ def run_quiz_session():
             display_results(results)
 
             # Ask if user wants another quiz
-            again = input("\nWould you like to take another quiz? (yes/no): ").strip().lower()
+            again = input(
+                "\nWould you like to take another quiz? (yes/no): ").strip().lower()
             if again != 'yes' and again != 'y':
                 print("\nThank you for using the quiz generator! Goodbye!")
                 break
 
         except Exception as e:
             print(f"An error occurred: {e}")
-            retry = input("\nWould you like to try again? (yes/no): ").strip().lower()
+            retry = input(
+                "\nWould you like to try again? (yes/no): ").strip().lower()
             if retry != 'yes' and retry != 'y':
                 print("\nExiting quiz generator. Goodbye!")
                 break
@@ -254,7 +261,3 @@ if __name__ == "__main__":
 
 
 # In[ ]:
-
-
-
-
